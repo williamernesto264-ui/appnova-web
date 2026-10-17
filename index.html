@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AppNova - Tienda de Aplicaciones</title>
+    <style>
+        :root {
+            --bg-color: #071426;
+            --card-color: #10223A;
+            --cyan: #19D9FF;
+            --blue: #087FFF;
+            --text-main: #ffffff;
+            --text-muted: #b0c4de;
+        }
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        /* Barra de navegación */
+        header {
+            background-color: #0A1B30;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--blue);
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--cyan);
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+        .nav-links a {
+            color: var(--text-main);
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+        .nav-links a:hover { color: var(--cyan); }
+        
+        /* Contenedor principal */
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .hero {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .hero h1 {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+        .hero p {
+            color: var(--text-muted);
+            font-size: 18px;
+        }
+
+        /* Cuadrícula de Apps */
+        .app-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+        }
+        .app-card {
+            background-color: var(--card-color);
+            border-radius: 15px;
+            padding: 25px;
+            border: 1px solid rgba(25, 217, 255, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+        .app-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(8, 127, 255, 0.2);
+            border-color: var(--cyan);
+        }
+        .app-icon {
+            font-size: 50px;
+            margin-bottom: 15px;
+        }
+        .app-title {
+            font-size: 22px;
+            margin: 0 0 10px 0;
+            color: var(--cyan);
+        }
+        .app-desc {
+            color: var(--text-muted);
+            font-size: 14px;
+            flex-grow: 1;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+        .btn-download {
+            display: block;
+            text-align: center;
+            background-color: var(--blue);
+            color: white;
+            text-decoration: none;
+            padding: 12px;
+            border-radius: 8px;
+            font-weight: bold;
+            border: 1px solid var(--cyan);
+            transition: 0.3s;
+        }
+        .btn-download:hover {
+            background-color: var(--cyan);
+            color: var(--bg-color);
+        }
+
+        /* Sección de contacto / WhatsApp */
+        .contact-section {
+            margin-top: 60px;
+            text-align: center;
+            background-color: var(--card-color);
+            padding: 40px 20px;
+            border-radius: 15px;
+            border: 1px dashed var(--cyan);
+        }
+        .btn-whatsapp {
+            display: inline-block;
+            background-color: #25D366; /* Color oficial de WhatsApp */
+            color: white;
+            text-decoration: none;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 15px;
+            box-shadow: 0 4px 10px rgba(37, 211, 102, 0.4);
+            transition: 0.3s;
+        }
+        .btn-whatsapp:hover {
+            background-color: #128C7E;
+            transform: scale(1.05);
+        }
+        
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: var(--text-muted);
+            font-size: 14px;
+            border-top: 1px solid #10223A;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- MENÚ -->
+    <header>
+        <a href="#" class="logo">🚀 AppNova</a>
+        <div class="nav-links">
+            <a href="#catalogo">Catálogo</a>
+            <a href="#pedidos">Hacer un Pedido</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- PORTADA -->
+        <section class="hero">
+            <h1>Bienvenido a AppNova</h1>
+            <p>Tu tienda de confianza para aplicaciones móviles. Explora nuestro catálogo y descarga las mejores herramientas.</p>
+        </section>
+
+        <!-- CATÁLOGO DE APPS -->
+        <section id="catalogo">
+            <h2 style="color: var(--cyan); margin-bottom: 20px;">Nuestras Aplicaciones</h2>
+            
+            <div class="app-grid">
+                
+                <!-- TARJETA DE APP 1: DIVISA MARKET -->
+                <div class="app-card">
+                    <div class="app-icon">💱</div>
+                    <h3 class="app-title">Divisa Market</h3>
+                    <p class="app-desc">Compra, vende e intercambia divisas de forma segura. Conecta con personas de tu zona para hacer intercambios rápidos y confiables.</p>
+                    
+                    <!-- AQUÍ VAMOS A PEGAR EL ENLACE DEL APK LUEGO -->
+                    <a href="#" class="btn-download">Descargar APK</a>
+                </div>
+
+                <!-- TARJETA DE APP 2: EJEMPLO PARA EL FUTURO -->
+                <!-- Para añadir una app nueva, solo copia este bloque y cámbialo -->
+                <div class="app-card" style="opacity: 0.6; border-style: dashed;">
+                    <div class="app-icon">➕</div>
+                    <h3 class="app-title">Próximamente...</h3>
+                    <p class="app-desc">Este es un espacio reservado para tu próxima gran idea. ¡Las posibilidades son infinitas!</p>
+                    <a href="#pedidos" class="btn-download" style="background-color: transparent;">Sugerir App</a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECCIÓN DE PEDIDOS Y SUGERENCIAS -->
+        <section id="pedidos" class="contact-section">
+            <h2 style="color: var(--cyan); margin-top: 0;">¿Tienes una idea o un pedido?</h2>
+            <p style="color: var(--text-muted); max-width: 600px; margin: 0 auto;">¿Necesitas una aplicación para tu negocio? ¿Tienes una sugerencia para mejorar AppNova? ¡Escríbenos directamente a nuestro WhatsApp!</p>
+            
+            <!-- AQUÍ VAMOS A PEGAR TU NÚMERO DE WHATSAPP -->
+            <a href="https://wa.me/5355555555?text=Hola,%20tengo%20una%20sugerencia%20para%20AppNova" target="_blank" class="btn-whatsapp">
+                💬 Contactar por WhatsApp
+            </a>
+        </section>
+    </div>
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        &copy; 2026 AppNova. Todos los derechos reservados.
+    </footer>
+
+</body>
+</html>
