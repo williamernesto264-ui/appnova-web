@@ -56,14 +56,8 @@
             text-align: center;
             margin-bottom: 50px;
         }
-        .hero h1 {
-            font-size: 40px;
-            margin-bottom: 10px;
-        }
-        .hero p {
-            color: var(--text-muted);
-            font-size: 18px;
-        }
+        .hero h1 { font-size: 40px; margin-bottom: 10px; }
+        .hero p { color: var(--text-muted); font-size: 18px; }
 
         /* Cuadrícula de Apps */
         .app-grid {
@@ -79,15 +73,21 @@
             transition: transform 0.3s, box-shadow 0.3s;
             display: flex;
             flex-direction: column;
+            align-items: center;
+            text-align: center;
         }
         .app-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 20px rgba(8, 127, 255, 0.2);
             border-color: var(--cyan);
         }
-        .app-icon {
-            font-size: 50px;
+        .app-icon-img {
+            width: 90px;
+            height: 90px;
+            border-radius: 20px; /* Bordes redondeados tipo app */
             margin-bottom: 15px;
+            object-fit: cover;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.4);
         }
         .app-title {
             font-size: 22px;
@@ -103,6 +103,8 @@
         }
         .btn-download {
             display: block;
+            width: 100%;
+            box-sizing: border-box;
             text-align: center;
             background-color: var(--blue);
             color: white;
@@ -129,7 +131,7 @@
         }
         .btn-whatsapp {
             display: inline-block;
-            background-color: #25D366; /* Color oficial de WhatsApp */
+            background-color: #25D366;
             color: white;
             text-decoration: none;
             padding: 15px 30px;
@@ -157,34 +159,14 @@
 
         /* --- DISEÑO RESPONSIVE PARA CELULARES --- */
         @media (max-width: 768px) {
-            header {
-                flex-direction: column;
-                padding: 15px;
-                gap: 15px;
-            }
-            .nav-links a {
-                margin: 0 10px;
-                font-size: 14px;
-            }
-            .hero h1 {
-                font-size: 28px;
-            }
-            .hero p {
-                font-size: 15px;
-            }
-            .app-grid {
-                grid-template-columns: 1fr;
-            }
-            .app-card {
-                padding: 20px;
-            }
-            .contact-section {
-                padding: 25px 15px;
-            }
-            .btn-whatsapp {
-                width: 100%;
-                box-sizing: border-box;
-            }
+            header { flex-direction: column; padding: 15px; gap: 15px; }
+            .nav-links a { margin: 0 10px; font-size: 14px; }
+            .hero h1 { font-size: 28px; }
+            .hero p { font-size: 15px; }
+            .app-grid { grid-template-columns: 1fr; }
+            .app-card { padding: 20px; }
+            .contact-section { padding: 25px 15px; }
+            .btn-whatsapp { width: 100%; box-sizing: border-box; }
         }
     </style>
 </head>
@@ -214,17 +196,19 @@
                 
                 <!-- TARJETA DE APP 1: DIVISA MARKET -->
                 <div class="app-card">
-                    <div class="app-icon">💱</div>
+                    <!-- ICONO DE LA APP -->
+                    <img src="divisa_market_icon.png" alt="Divisa Market" class="app-icon-img">
+                    
                     <h3 class="app-title">Divisa Market</h3>
                     <p class="app-desc">Compra, vende e intercambia divisas de forma segura. Conecta con personas de tu zona para hacer intercambios rápidos y confiables.</p>
                     
-                    <!-- ENLACE REAL DEL APK -->
-                    <a href="https://github.com/williamernesto264-ui/appnova-web/releases/latest/download/app-arm64-v8a-release.apk" class="btn-download">Descargar APK</a>
+                    <!-- ENLACE DIRECTO AL APK (Termina en .apk) -->
+                    <a href="https://github.com/williamernesto264-ui/appnova-web/releases/download/v1.0/Divisa-Market.apk" class="btn-download">Descargar APK</a>
                 </div>
 
                 <!-- TARJETA DE APP 2: EJEMPLO PARA EL FUTURO -->
                 <div class="app-card" style="opacity: 0.6; border-style: dashed;">
-                    <div class="app-icon">➕</div>
+                    <div style="font-size: 50px; margin-bottom: 15px;">➕</div>
                     <h3 class="app-title">Próximamente...</h3>
                     <p class="app-desc">Este es un espacio reservado para tu próxima gran idea. ¡Las posibilidades son infinitas!</p>
                     <a href="#pedidos" class="btn-download" style="background-color: transparent;">Sugerir App</a>
@@ -238,7 +222,6 @@
             <h2 style="color: var(--cyan); margin-top: 0;">¿Tienes una idea o un pedido?</h2>
             <p style="color: var(--text-muted); max-width: 600px; margin: 0 auto;">¿Necesitas una aplicación para tu negocio? ¿Tienes una sugerencia para mejorar AppNova? ¡Escríbenos directamente a nuestro WhatsApp!</p>
             
-            <!-- WHATSAPP CON TU NÚMERO -->
             <a href="https://wa.me/5355572968?text=Hola,%20tengo%20una%20sugerencia%20para%20AppNova" target="_blank" class="btn-whatsapp">
                 💬 Contactar por WhatsApp
             </a>
