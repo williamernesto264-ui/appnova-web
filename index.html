@@ -20,6 +20,7 @@
             margin: 0;
             padding: 0;
         }
+        
         /* Barra de navegación */
         header {
             background-color: #0A1B30;
@@ -153,6 +154,38 @@
             border-top: 1px solid #10223A;
             margin-top: 50px;
         }
+
+        /* --- DISEÑO RESPONSIVE PARA CELULARES --- */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column; /* Pone el logo arriba y los botones abajo */
+                padding: 15px;
+                gap: 15px;
+            }
+            .nav-links a {
+                margin: 0 10px;
+                font-size: 14px; /* Hace las letras del menú más pequeñas */
+            }
+            .hero h1 {
+                font-size: 28px; /* Título más adaptado al celular */
+            }
+            .hero p {
+                font-size: 15px;
+            }
+            .app-grid {
+                grid-template-columns: 1fr; /* Las tarjetas se ponen una debajo de otra */
+            }
+            .app-card {
+                padding: 20px;
+            }
+            .contact-section {
+                padding: 25px 15px;
+            }
+            .btn-whatsapp {
+                width: 100%; /* Botón de WhatsApp a lo ancho */
+                box-sizing: border-box;
+            }
+        }
     </style>
 </head>
 <body>
@@ -207,7 +240,7 @@
             <p style="color: var(--text-muted); max-width: 600px; margin: 0 auto;">¿Necesitas una aplicación para tu negocio? ¿Tienes una sugerencia para mejorar AppNova? ¡Escríbenos directamente a nuestro WhatsApp!</p>
             
             <!-- AQUÍ VAMOS A PEGAR TU NÚMERO DE WHATSAPP -->
-            <a href="https://wa.me/5355572968?text=Hola,%20tengo%20una%20sugerencia%20para%20AppNova" target="_blank" class="btn-whatsapp">
+            <a href="https://wa.me/5355555555?text=Hola,%20tengo%20una%20sugerencia%20para%20AppNova" target="_blank" class="btn-whatsapp">
                 💬 Contactar por WhatsApp
             </a>
         </section>
